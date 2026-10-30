@@ -5,94 +5,86 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Defensible Listing Photos</title>
 <style>
-body { font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #222; }
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.3rem; margin-top: 2rem; }
-.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
-.pair img { width: 100%; height: auto; border-radius: 6px; }
-.pair div { text-align: center; font-size: 0.85rem; color: #555; margin-top: 0.3rem; }
-.note { background: #f6f6f6; padding: 1rem; border-radius: 6px; margin: 1.5rem 0; }
-a { color: #0066cc; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 1.5rem; line-height: 1.5; color: #1a1a1a; background: #fafafa; }
+header { margin-bottom: 2rem; }
+h1 { font-size: 1.75rem; margin: 0 0 0.5rem; font-weight: 600; }
+.subtitle { color: #444; margin: 0; }
+nav { display: flex; gap: 1.5rem; margin: 1.5rem 0 2rem; font-size: 0.95rem; }
+nav a { color: #0066cc; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+section { background: #fff; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+h2 { font-size: 1.25rem; margin: 0 0 1rem; font-weight: 600; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+.pair:last-child { margin-bottom: 0; }
+.pair img { width: 100%; height: auto; border-radius: 4px; display: block; }
+.pair .label { text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.4rem; font-weight: 500; }
+.summary { background: #f4f8fc; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; }
+.summary strong { color: #1a1a1a; }
+ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+.cta { margin-top: 1rem; }
+a.button { display: inline-block; background: #0066cc; color: #fff; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-size: 0.95rem; }
+a.button:hover { background: #0052a3; }
+footer { font-size: 0.85rem; color: #666; margin-top: 2rem; text-align: center; }
+@media (max-width: 600px) { .pair { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
+<header>
 <h1>Defensible Listing Photos</h1>
-<p>Photos that look better, stay true to the property, and come with a clear record of what changed.</p>
+<p class="subtitle">Cleaner photos from the ones you already have, with a clear record of what changed.</p>
+</header>
 
-<div class="note">
-<strong>What this is:</strong> A first-pass example from a lived-in apartment. Each photo was cleaned up (lighting, color, mild declutter) while keeping the space itself unchanged. All five are classified as Exempt — no disclosure required.
-</div>
+<nav>
+<a href="#examples">Examples</a>
+<a href="compliance.html">Compliance record</a>
+<a href="#about">About</a>
+</nav>
 
-<h2>Before / After</h2>
-
-<div class="pair">
-  <div>
-    <img src="before-living.jpg" alt="Living room before">
-    <div>Before — Living room</div>
-  </div>
-  <div>
-    <img src="after-living.jpg" alt="Living room after">
-    <div>After — Living room</div>
-  </div>
-</div>
+<section id="examples">
+<h2>Before / After examples</h2>
+<p style="margin-top:0; color:#444;">Lived-in apartment. Lighting, color, and mild declutter only. Space itself unchanged. All classified Exempt.</p>
 
 <div class="pair">
-  <div>
-    <img src="before-kitchen.jpg" alt="Kitchen before">
-    <div>Before — Kitchen</div>
-  </div>
-  <div>
-    <img src="after-kitchen.jpg" alt="Kitchen after">
-    <div>After — Kitchen</div>
-  </div>
+<div><img src="before-living.jpg" alt="Living room before"><div class="label">Before — Living room</div></div>
+<div><img src="after-living.jpg" alt="Living room after"><div class="label">After — Living room</div></div>
 </div>
-
 <div class="pair">
-  <div>
-    <img src="before-dining.jpg" alt="Dining before">
-    <div>Before — Dining</div>
-  </div>
-  <div>
-    <img src="after-dining.jpg" alt="Dining after">
-    <div>After — Dining</div>
-  </div>
+<div><img src="before-kitchen.jpg" alt="Kitchen before"><div class="label">Before — Kitchen</div></div>
+<div><img src="after-kitchen.jpg" alt="Kitchen after"><div class="label">After — Kitchen</div></div>
 </div>
-
 <div class="pair">
-  <div>
-    <img src="before-hallway.jpg" alt="Hallway before">
-    <div>Before — Hallway</div>
-  </div>
-  <div>
-    <img src="after-hallway.jpg" alt="Hallway after">
-    <div>After — Hallway</div>
-  </div>
+<div><img src="before-dining.jpg" alt="Dining before"><div class="label">Before — Dining</div></div>
+<div><img src="after-dining.jpg" alt="Dining after"><div class="label">After — Dining</div></div>
 </div>
-
 <div class="pair">
-  <div>
-    <img src="before-bathroom.jpg" alt="Bathroom before">
-    <div>Before — Bathroom</div>
-  </div>
-  <div>
-    <img src="after-bathroom.jpg" alt="Bathroom after">
-    <div>After — Bathroom</div>
-  </div>
+<div><img src="before-hallway.jpg" alt="Hallway before"><div class="label">Before — Hallway</div></div>
+<div><img src="after-hallway.jpg" alt="Hallway after"><div class="label">After — Hallway</div></div>
 </div>
+<div class="pair">
+<div><img src="before-bathroom.jpg" alt="Bathroom before"><div class="label">Before — Bathroom</div></div>
+<div><img src="after-bathroom.jpg" alt="Bathroom after"><div class="label">After — Bathroom</div></div>
+</div>
+</section>
 
-<h2>Compliance record</h2>
-<p>Every set comes with an edit log that states what changed, what did not change, and whether disclosure is required. For this example set:</p>
+<section id="about">
+<h2>What this is</h2>
+<div class="summary">
+Every set includes an edit log that states what changed, what did not change, and whether disclosure is required. For this example set:
 <ul>
 <li>All five images: Exempt (lighting, color, straighten, limited personal-item reduction)</li>
 <li>No structural changes, no added or removed furniture, no view modifications</li>
 <li>Originals retained and referenced</li>
 </ul>
-<p><a href="ab723-compliance-one-pager-first-pass.md">View the full one-pager</a></p>
-
-<div class="note">
-This is a working example, not a finished product. The goal is photos that are useful for a listing and defensible if the MLS or a buyer asks what was done.
 </div>
+<p>The goal is photos that are useful for a listing and defensible if the MLS or a buyer asks what was done.</p>
+<div class="cta">
+<a class="button" href="compliance.html">View the compliance record</a>
+</div>
+</section>
 
-<p style="margin-top: 3rem; font-size: 0.9rem; color: #666;">Questions or want to try it on a listing? Reach out.</p>
+<footer>
+Working example. Questions or want to try it on a listing? Reach out.
+</footer>
 </body>
 </html>
